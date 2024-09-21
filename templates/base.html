@@ -22,7 +22,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-<link rel="stylesheet" href="{% static 'css/style.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">    
 
 </head>
 
@@ -41,7 +41,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="#">Home</a>
+                            href="{% url 'home' %}">Home</a>
                     </li>
 
                 </ul>
@@ -56,13 +56,16 @@
 
         {% block content %}
         <!-- Content Goes here -->
+         <p>This is my default paragraph</p>
         {% endblock content %}
 
     </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
+        
+        <p class="m-0 text-center text-white">{% block what %}Made by Code Instituters</p>
+        {% endblock what %}
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
