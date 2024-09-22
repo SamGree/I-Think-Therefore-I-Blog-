@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Post
 
+
 # Create your views here.
 #def my_blog(request):
  #   return HttpResponse("Hello, Blog!")
@@ -34,5 +35,7 @@ def post_detail(request, slug):
     return render(
         request,
         "blog/post_detail.html",
-        {"post": post},
+        {"post": post,
+        "coder": "Sam Green"},
     )    
+
