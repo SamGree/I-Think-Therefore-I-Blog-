@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["8000-samgree-ithinktherefore-uddw61o5ues.ws-eu116.gitpod.io",
+ALLOWED_HOSTS = ["8000-samgree-ithinktherefore-8zggw6froa0.ws-eu116.gitpod.io",
 '.herokuapp.com']
 
 
@@ -107,7 +107,7 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
-    "https://8000-samgree-ithinktherefore-uddw61o5ues.ws-eu116.gitpod.io",
+    "https://8000-samgree-ithinktherefore-8zggw6froa0.ws-eu116.gitpod.io",
     "https://*.herokuapp.com"
 ]
 
