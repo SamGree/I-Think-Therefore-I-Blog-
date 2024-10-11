@@ -66,7 +66,18 @@ def post_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    Edit an existing comment on a :model:`blog.Post`.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`blog.Post`.
+    ``comment``
+        An instance of :model:`blog.Comment`.
+
+    **Template:**
+
+    Redirects to :template:`blog/post_detail.html`.
     """
     if request.method == "POST":
         queryset = Post.objects.filter(status=1)
