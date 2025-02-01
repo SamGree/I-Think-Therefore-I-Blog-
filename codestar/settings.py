@@ -30,10 +30,10 @@ SECRET_KEY = 'django-insecure-x%o&fq*2u!1os!b42zbm+x&%@2f=gyoz&q08uqo=$)js)24&=s
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["8000-samgree-ithinktherefore-8zggw6froa0.ws-eu116.gitpod.io",
-'.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1',
+                 '.herokuapp.com']
 
 
 # Application definition
@@ -101,20 +101,19 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #   'default': {
 #      'ENGINE': 'django.db.backends.sqlite3',
 #     'NAME': BASE_DIR / 'db.sqlite3',
-#}
-#}
+# }
+# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeinstitute-ide.net/",
-    "https://8000-samgree-ithinktherefore-8zggw6froa0.ws-eu116.gitpod.io",
+    "https://localhost",
     "https://*.herokuapp.com"
 ]
 
